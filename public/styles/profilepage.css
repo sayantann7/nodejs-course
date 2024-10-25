@@ -1,0 +1,148 @@
+#card {
+    width: 380px;
+    height: 380px;
+    background: linear-gradient(90deg, lightsteelblue, lightslategrey);
+    border-radius: 10px;
+    margin: calc((100vh - 400px)/2) auto;
+    box-shadow: 5px 5px 5px gray;
+    position: absolute;
+    top: 100px;
+    left: 620px;
+    display: flex;
+    box-shadow: 3px 3px 15px black;
+    font-family: Verdana;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+#card {
+    width: 300px;
+    height: 280px;
+    background: white;
+    
+    position: absolute;
+    
+}
+
+#main {
+    width: 210px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#stats {
+    width: 90px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#profile {
+    width: 90px;
+    height: 90px;
+    position: relative;
+    cursor: pointer;
+}
+
+#profile:hover #circle1 {
+    transform: rotate(-360deg);
+}
+
+#profile:hover #circle2 {
+    transform: rotate(360deg);
+}
+
+.circle {
+    position: absolute;
+    display: border-box;
+    border-radius: 50%;
+    border: 1px solid midnightblue;
+    transition: transform 1500ms;
+}
+
+#circle1 {
+    width: 82px;
+    height: 82px;
+    top: 4px;
+    left: 4px;
+    border-right-color: white;
+}
+
+#circle2 {
+    width: 76px;
+    height: 76px;
+    top: 7px;
+    left: 7px;
+    border-left-color: white;
+}
+
+#main img {
+    top: 10px;
+    left: 10px;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.bold,
+.statCount {
+    font-size: 15px;
+}
+
+.thin,
+.statTitle {
+    font-size: 12px;
+}
+
+#name {
+    margin-top: 15px;
+}
+
+#job {
+    margin-bottom: 15px;
+}
+
+.button {
+    width: 120px;
+    height: 30px;
+    border-radius: 15px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: 1px solid midnightblue;
+    color: midnightblue;
+    background: white;
+    cursor: pointer;
+    transition: background 600ms, color 600ms;
+    box-shadow: 2px 2px 5px black;
+}
+
+.button:hover {
+    background: midnightblue;
+    color: white;
+}
+
+.button:active {
+    background: midnightblue;
+    color: white;
+    margin-top: 7px;
+    margin-bottom: 3px;
+    box-shadow: none;
+}
+
+.statItem {
+    width: 100%;
+    height: 91px;
+    background: gainsboro;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.statItem:hover {
+    background: #CDCDCD;
+}

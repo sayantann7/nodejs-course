@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/signin.css">
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <h2 class="logo-heading"><a href="/" style="text-decoration: none; color: white;">Home</a></h2>
+        </div>
+        <div class="navbar">
+            <ul class="navbar-items">
+                <li class="nav-list"><a class="navlinks" href="/profiles/">Profiles</a></li>
+                <li class="nav-list"><a class="navlinks" href="/contact/">Contact</a></li>
+                <li class="nav-list "><a class="navlinks" href="/signin/">Sign In</a></li>
+            </ul>
+            <div class="sign-up-button"><a href="/signup" style="text-decoration: none; color: white;">Sign Up</a></div>
+            <div class="menu-button">
+                <div class="menu-icon"></div>
+            </div>
+        </div>
+
+    </nav>
+    <div class="grid">
+        <hr class="sketch-rule grid__item">
+    </div>
+    <main class="main-container">
+        <div class="hero">
+            <h1 class="hero-title">Sign In Page</h1>
+            <div class="login-container">
+                <h1 class="login-title">Sign In</h1>
+                <form id="loginForm">
+                    <div class="input-group">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" name="username" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <button style="background-color: #40be88; color: white;" type="submit">Sign In</button>
+                </form>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

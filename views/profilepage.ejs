@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= username %></title>
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/profilepage.css">
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <h2 class="logo-heading"><a href="/" style="text-decoration: none; color: white;">Home</a></h2>
+        </div>
+        <div class="navbar">
+            <ul class="navbar-items">
+                <li class="nav-list"><a class="navlinks" href="/profiles/">Profiles</a></li>
+                <li class="nav-list"><a class="navlinks" href="/contact/">Contact</a></li>
+                <li class="nav-list "><a class="navlinks" href="/signin/">Sign In</a></li>
+            </ul>
+            <div class="sign-up-button"><a href="/signup" style="text-decoration: none; color: white;">Sign Up</a></div>
+            <div class="menu-button">
+                <div class="menu-icon"></div>
+            </div>
+        </div>
+
+    </nav>
+    <div class="grid">
+        <hr class="sketch-rule grid__item">
+    </div>
+    <div id="card">
+        <div id=main>
+            <div id="profile">
+                <div id="circle1" class="circle"></div>
+                <div id="circle2" class="circle"></div>
+                <img src="https://100dayscss.com/codepen/jessica-potter.jpg" width="70" height="70"
+                    alt="Jessica Potter">
+            </div>
+            <span id="name" class="bold"><%= username %></span>
+            <span id="job" class="thin">Visual Artist</span>
+            <button class="button">Follow</button>
+            <button class="button">Message</button>
+        </div>
+        <div id="stats">
+            <div class="statItem">
+                <span class="statCount"><a href="/profiles/<%= username %>/posts" style="text-decoration: none; color: black;">384</a></span>
+                <span class="statTitle">Post</span>
+            </div>
+            <div class="statItem">
+                <span class="statCount">1545</span>
+                <span class="statTitle">Likes</span>
+            </div>
+            <div class="statItem">
+                <span class="statCount">715</span>
+                <span class="statTitle">Followers</span>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
