@@ -3,11 +3,20 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var session = require('express-session')
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
 var app = express();
+
+
+//sessions setup
+app.use(session({
+  resave: false, //this basically takes the load off the server a little bit by not frequently saving the data that has not changed... it should be saved only if it has been changed
+  saveUninitialized: false, //this also keeps the server light... it does this by not saving the current session to the server until and unless there is any change in the current session
+  secret: "hehehehehehehe"
+})); //this code will help us create sessions
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

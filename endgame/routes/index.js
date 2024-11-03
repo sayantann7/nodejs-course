@@ -6,7 +6,33 @@ const userModel = require("./users");
 
 //we are using router.get instead of app.get because the app object is not available in this file... the app object is available in the app.js file... we are using the router object to create routes in this file...
 router.get('/', function(req, res) {
+  req.session.sessionName = "hello"; //this line basically helps us store anything in the current session... we are storing "hello" inside the variable sessionName inside the session.... this will set the value of sessionName only for my device as "hello"... this value will not be same for the other users or devices
   res.render('index', { title: 'express' });
+});
+
+router.get("/cookie",function(req,res){
+  res.cookie("age",25); //this line creates a cookie with a variable age and sets it as 25... res is used in this case because we are sending data from the server to the browser
+  res.send("Cookies");
+});
+
+router.get("/read",function (req,res) {
+  res.send(req.cookies); //this is used to read the cookie... we use req to access the cookies because we are getting this data from the browser that means we are requesting this data from the browser
+});
+
+router.get("/delcookie",function(req,res){
+  res.clearCookie("age"); //this is used to delete the cookie... we use res in this
+  res.send("cookie cleared");
+});
+
+router.get("/check",function(req,res){
+  res.send(req.session); //we can access the current session using this line
+});
+
+router.get("/del",function(req,res){
+  req.session.destroy(function(err){
+    if (err) throw err;
+    res.send("sessionName deleted");
+  });//this is deleting the current session and it also takes a callback func in its parameters which is a func which would be executed once the session has been deleted
 });
 
 router.get('/create', async function(req, res) {
